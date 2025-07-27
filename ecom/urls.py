@@ -5,13 +5,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 
-admin.site.site_title="BUJUX-Admin"
 urlpatterns = [
     path('admin/', admin.site.urls),
         path('', include('app.urls')),
 
-]
-
-if settings.DEBUG:
+]if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
