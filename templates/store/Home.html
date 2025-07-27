@@ -1,0 +1,341 @@
+{% extends 'base.html' %}
+
+<title>
+    {% block title %}
+    Home
+    {% endblock %}
+</title>
+{% load media_filters %}
+
+
+{% block body %}
+
+<div class="carousel relative container mx-auto" style="max-width:1600px;">
+        <div class="carousel-inner relative overflow-hidden w-full">
+            <!--Slide 1-->
+            <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+            <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('https://images.unsplash.com/photo-1422190441165-ec2956dc9ecc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80');">
+
+                    <div class="container mx-auto">
+                        <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
+                            <p class="text-black text-2xl my-4">Stripy Zig Zag Jigsaw Pillow and Duvet Set</p>
+                            <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="{% url 'store' %}">view product</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+            <label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+            <!--Slide 2-->
+            <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+            <div class="carousel-item absolute opacity-0 bg-cover bg-right" style="height:50vh;">
+                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjM0MTM2fQ&auto=format&fit=crop&w=1600&q=80');">
+
+                    <div class="container mx-auto">
+                        <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
+                            <p class="text-black text-2xl my-4">Real Bamboo Wall Clock</p>
+                            <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="{% url 'store' %}">view product</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+            <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+            <!--Slide 3-->
+            <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+            <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-bottom" style="background-image: url('https://images.unsplash.com/photo-1519327232521-1ea2c736d34d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80');">
+
+                    <div class="container mx-auto">
+                        <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
+                            <p class="text-black text-2xl my-4">Brown and blue hardbound book</p>
+                            <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="#">view product</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+            <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+            <!-- Add additional indicators for each slide-->
+            <ol class="carousel-indicators">
+                <li class="inline-block mr-3">
+                    <label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+                </li>
+                <li class="inline-block mr-3">
+                    <label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+                </li>
+                <li class="inline-block mr-3">
+                    <label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+                </li>
+            </ol>
+
+        </div>
+    </div>
+
+
+<div class="flex justify-center items-center">
+  <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
+  <div class="2xl:mx-auto 2xl:container py-12 px-4 sm:px-6 xl:px-20 2xl:px-0 w-full">
+    <div class="flex flex-col jusitfy-center items-center space-y-10">
+      <div class="flex flex-col justify-center items-center ">
+        <h1 class="text-3xl xl:text-4xl font-semibold leading-7 xl:leading-9  dark:text-white uppercase">Shop By Category</h1>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-4 md:gap-x-8 w-full">
+        <div class="relative group flex justify-center items-center h-full w-full">
+          <img class="object-center object-cover h-full w-full" src="https://i.ibb.co/ThPFmzv/omid-armin-m-VSb6-PFk-VXw-unsplash-1-1.png" alt="girl-image" />
+          <a href="{% url 'store' %}" class=" bg-yellow-300 shadow-sm rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base font-medium leading-none text-center py-3 w-36 ">Women</a>
+                       <div class="absolute -top-8 -left-8 w-32 h-32 bg-yellow-100 rounded-full z-[-1]"></div>
+
+        </div>
+
+        <div class="flex flex-col space-y-4 md:space-y-8 mt-4 md:mt-0">
+          <div class="relative group flex justify-center items-center h-full w-full">
+            <img class="object-center object-cover h-full w-full" src="https://i.ibb.co/SXZvYHs/irene-kredenets-DDqx-X0-7v-KE-unsplash-1.png" alt="shoe-image" />
+            <button class="bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base font-medium leading-none  py-3 w-36 ">Shoes</button>
+            <div class="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20 w-36 bg-white bg-opacity-50"></div>
+          </div>
+          <div class="relative group flex justify-center items-center h-full w-full">
+            <img class="object-center object-cover h-full w-full" src="https://i.ibb.co/Hd1pVxW/louis-mornaud-Ju-6-TPKXd-Bs-unsplash-1-2.png" alt="watch-image" />
+            <button class="bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base font-medium leading-none  py-3 w-36 ">Watches</button>
+          </div>
+        </div>
+
+     <div class="relative group flex justify-center items-center h-full w-full">
+          <img class="object-center object-cover h-full w-full" src="https://images.unsplash.com/photo-1619603364937-8d7af41ef206?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="girl-image" />
+          <a href="{% url 'store' %}" class="text-center bg-yellow-300 shadow-sm rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base font-medium leading-none text-center  py-3 w-36 ">Men</a>
+                       <div class="absolute -top-8 -right-8 w-32 h-32 bg-yellow-100 rounded-full z-[-1]"></div>
+
+        </div>
+
+
+        <div class="relative group flex justify-center items-center h-full w-full mt-4 md:hidden md:mt-8 lg:hidden">
+          <img class="object-center object-cover h-full w-full hidden md:block" src="https://i.ibb.co/6FjW19n/olive-tatiane-Im-Ez-F9-B91-Mk-unsplash-2.png" alt="girl-image" />
+          <img class="object-center object-cover h-full w-full md:hidden" src="https://i.ibb.co/sQgHwHn/olive-tatiane-Im-Ez-F9-B91-Mk-unsplash-1.png" alt="olive-tatiane-Im-Ez-F9-B91-Mk-unsplash-2" />
+          <a href="{% url 'store' %}" class="bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base font-medium leading-none text-center  py-3 w-36 ">Accessories</a>
+        </div>
+      </div>
+      <div class="relative group hidden md:flex justify-center items-center h-full w-full mt-4 md:mt-8 lg:hidden">
+        <img class="object-center object-cover h-full w-full hidden md:block" src="https://i.ibb.co/6FjW19n/olive-tatiane-Im-Ez-F9-B91-Mk-unsplash-2.png" alt="girl-image" />
+        <img class="object-center object-cover h-full w-full sm:hidden" src="https://i.ibb.co/sQgHwHn/olive-tatiane-Im-Ez-F9-B91-Mk-unsplash-1.png" alt="olive-tatiane-Im-Ez-F9-B91-Mk-unsplash-2" />
+        <a href="{% url 'store' %}" class="text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base font-medium leading-none  py-3 w-36 text-center bg-gray-900">Accessories</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    <section class="bg-white py-8">
+
+        <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
+
+      
+
+
+
+            {% for product in products %}
+
+            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                <a href="{% url 'product_detail' product.id %}">
+   {% if product.main_image %}
+
+  <img class="hover:grow hover:shadow-lg" src="{{ product.main_image|image_url_clean }}" alt="{{ product.name }}">
+
+                {% else %}
+                    <p>No Image</p>
+                {% endif %}
+
+
+                    <div class="pt-3 flex items-center justify-between">
+                   
+                        <p class="">
+
+                            {{ product.name }}
+                        </p>
+       
+                        
+
+{% if user.is_authenticated %}
+
+{% if product.id in favorite_ids %}
+    <a href="{% url 'remove_from_favorites' product.id %}" class="text-red-500 font-semibold">
+        ❤️
+    </a>
+{% else %}
+    <a href="{% url 'add_to_favorites' product.id %}" class="text-gray-600 font-semibold">
+        <!-- empty heart SVG here -->
+        <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
+        </svg>
+    </a>
+{% endif %}
+
+{% else %}
+
+  <a href="{% url 'login' %}" class="text-gray-600 font-semibold">
+        <!-- empty heart SVG here -->
+        <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
+        </svg>
+    </a>
+
+{% endif %}
+
+
+
+                      
+                    </div>
+                    <p class="pt-1 text-gray-900">£{{ product.price }}</p>
+                </a>
+            </div>
+        {% endfor %}
+
+
+
+
+            </div>
+
+    </section>
+
+
+<section class="relative bg-gradient-to-r from-white to-gray-50 py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+
+    <!-- Text Content -->
+    <div class="max-w-xl">
+      <span class="text-yellow-500 font-semibold uppercase tracking-widest mb-2 block">Premium Materials</span>
+      <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight mb-6">
+        Timeless Fashion for the <span class="text-yellow-400">Modern Minimalist</span>
+      </h1>
+      <p class="text-lg text-gray-600 mb-8">
+        Discover curated collections made with natural fibers, minimalist cuts, and effortless style — designed to elevate your everyday wardrobe.
+      </p>
+      <a href="{% url 'store' %}" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-full transition duration-300 shadow-lg">
+        Explore Collection
+      </a>
+    </div>
+
+    <!-- Image Section -->
+    <div class="relative w-full max-w-md lg:max-w-xl">
+      <div class="rounded-xl border-8 border-yellow-200 overflow-hidden shadow-xl transform hover:scale-105 transition duration-500">
+        <img src="https://plus.unsplash.com/premium_photo-1690034978591-10f7ded473b5?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Minimalist Fashion"
+             class="w-full h-auto object-cover">
+      </div>
+      <!-- Decorative Circle BG -->
+      <div class="absolute -top-8 -left-8 w-32 h-32 bg-yellow-100 rounded-full z-[-1]"></div>
+    </div>
+
+  </div>
+</section>
+
+
+   <section class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl md:text-4xl font-light text-gray-800 text-center mb-12">New Collection</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <article class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl">
+                <div class="aspect-w-3 aspect-h-4 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f" alt="Fashion item 1" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                    <h3 class="text-xl font-medium text-white">Elegant Evening Dress</h3>
+                    <p class="mt-2 text-sm text-gray-200">$299.99</p>
+                    <button class="mt-4 bg-white px-4 py-2 text-sm font-medium text-gray-900 opacity-0 transition-opacity group-hover:opacity-100 rounded-full">Quick View</button>
+                </div>
+            </article>
+            <article class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl">
+                <div class="aspect-w-3 aspect-h-4 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b" alt="Fashion item 2" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                    <h3 class="text-xl font-medium text-white">Designer Handbag</h3>
+                    <p class="mt-2 text-sm text-gray-200">$459.99</p>
+                    <button class="mt-4 bg-white px-4 py-2 text-sm font-medium text-gray-900 opacity-0 transition-opacity group-hover:opacity-100 rounded-full">Quick View</button>
+                </div>
+            </article>
+            <article class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl">
+                <div class="aspect-w-3 aspect-h-4 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1548126032-079a0fb0099d" alt="Fashion item 3" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                    <h3 class="text-xl font-medium text-white">Classic Leather Boots</h3>
+                    <p class="mt-2 text-sm text-gray-200">$189.99</p>
+                    <button class="mt-4 bg-white px-4 py-2 text-sm font-medium text-gray-900 opacity-0 transition-opacity group-hover:opacity-100 rounded-full">Quick View</button>
+                </div>
+            </article>
+            <article class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl">
+                <div class="aspect-w-3 aspect-h-4 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1584273143981-41c073dfe8f8" alt="Fashion item 4" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                    <h3 class="text-xl font-medium text-white">Silk Summer Scarf</h3>
+                    <p class="mt-2 text-sm text-gray-200">$89.99</p>
+                    <button class="mt-4 bg-white px-4 py-2 text-sm font-medium text-gray-900 opacity-0 transition-opacity group-hover:opacity-100 rounded-full">Quick View</button>
+                </div>
+            </article>
+            <article class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl">
+                <div class="aspect-w-3 aspect-h-4 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1621786030484-4c855eed6974" alt="Fashion item 5" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                    <h3 class="text-xl font-medium text-white">Designer Sunglasses</h3>
+                    <p class="mt-2 text-sm text-gray-200">$159.99</p>
+                    <button class="mt-4 bg-white px-4 py-2 text-sm font-medium text-gray-900 opacity-0 transition-opacity group-hover:opacity-100 rounded-full">Quick View</button>
+                </div>
+            </article>
+            <article class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl">
+                <div class="aspect-w-3 aspect-h-4 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1618932260643-eee4a2f652a6" alt="Fashion item 6" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                    <h3 class="text-xl font-medium text-white">Luxury Watch</h3>
+                    <p class="mt-2 text-sm text-gray-200">$899.99</p>
+                    <button class="mt-4 bg-white px-4 py-2 text-sm font-medium text-gray-900 opacity-0 transition-opacity group-hover:opacity-100 rounded-full">Quick View</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+
+
+<section class="bg-white py-12 px-4">
+  <div class="max-w-2xl mx-auto text-center">
+    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-2">Stay in the loop</h2>
+    <p class="text-gray-500 mb-6 text-sm sm:text-base">
+      Subscribe to get updates on new arrivals, exclusive offers, and insider style tips.
+    </p>
+    <form method="post" action="{% url 'subscribe_newsletter' %}"  class="flex flex-col sm:flex-row items-center gap-4">
+        {% csrf_token %}
+
+      
+      <input 
+       type="email" name="email" required
+
+        placeholder="Enter your email"
+        class="w-full sm:flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black transition duration-200"
+      />
+      <button 
+        type="submit" 
+        class="px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-900 transition duration-200"
+      >
+        Subscribe
+      </button>
+    </form>
+  </div>
+</section>
+
+
+<br/>
+
+
+<br/>
+
+<br/>
+
+{% endblock %}
