@@ -8,13 +8,7 @@ urlpatterns = [
     path('', include('app.urls')),
 ]
 
-<<<<<<< HEAD
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-=======
-]
-
 if settings.DEBUG:
     # Static files should still be served in development
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
->>>>>>> e94d237 (✅ Setup Cloudinary storage and update requirements)
+    
