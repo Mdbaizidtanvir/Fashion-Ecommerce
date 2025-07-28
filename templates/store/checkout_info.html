@@ -1,0 +1,46 @@
+<!-- templates/store/checkout_info.html -->
+{% extends "base.html" %}
+{% block title %}Checkout Info{% endblock %}
+
+{% block body %}
+<div class="max-w-md mx-auto mt-10">
+  <h2 class="text-2xl font-bold mb-4">Checkout Details</h2>
+  <form action="{% url 'checkout_info' %}" method="POST" class="space-y-4">
+    {% csrf_token %}
+    
+    <input type="email" name="email" placeholder="Email" required
+           class="w-full border border-gray-300 px-4 py-2 rounded" />
+
+    <input type="text" name="phone" placeholder="Phone Number" required
+           class="w-full border border-gray-300 px-4 py-2 rounded" />
+
+    <textarea name="address" placeholder="Shipping Address" required
+              class="w-full border border-gray-300 px-4 py-2 rounded"></textarea>
+
+    <input type="text" name="zip_code" placeholder="ZIP Code" required
+           class="w-full border border-gray-300 px-4 py-2 rounded" />
+
+    <button type="submit"
+            class="w-full bg-black text-white py-2 rounded hover:bg-gray-800">
+      Continue to Payment
+    </button>
+  </form>
+</div>
+
+
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+
+<br/>
+{% endblock %}
